@@ -115,6 +115,22 @@
 					"fieldInstances": [],
 					"__worldX": 304,
 					"__worldY": 160
+				},
+				{
+					"__identifier": "AnyBlock",
+					"__grid": [6,6],
+					"__pivot": [0.5,0.5],
+					"__tags": [],
+					"__tile": null,
+					"__smartColor": "#959595",
+					"iid": "ee43d7f0-d380-11f0-84e4-2379ee6af13c",
+					"width": 16,
+					"height": 16,
+					"defUid": 9,
+					"px": [104,104],
+					"fieldInstances": [],
+					"__worldX": 312,
+					"__worldY": 104
 				}
 			]
 		},

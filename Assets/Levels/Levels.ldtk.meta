@@ -31,6 +31,8 @@ ScriptedImporter:
     _asset: {fileID: 6264206742604749520, guid: 30aaa32dfda72aa47b8f38081149a3f0, type: 3}
   - _key: Spawner_Color_4
     _asset: {fileID: 7066913251823411541, guid: ea2685b0d713655409d035ec559e9c07, type: 3}
+  - _key: AnyBlock
+    _asset: {fileID: 5851414908131563480, guid: 80c46b0827c5ec449943f505cdcdc330, type: 3}
   _enumGenerate: 0
   _enumPath: 
   _enumNamespace: 

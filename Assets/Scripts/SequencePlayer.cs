@@ -10,7 +10,7 @@ public class SequencePlayer : MonoBehaviour
     public InputManager inputManager;
     public GameManager gameManager;
 
-    public void SendOpCode(SequenceOpCode opCode)
+    public void SendOpCode(SequenceOpCode opCode, Vector3 position = default)
     {
         switch (opCode)
         {

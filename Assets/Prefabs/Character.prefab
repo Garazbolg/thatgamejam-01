@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208921765955268845}
   - component: {fileID: 3774027288488071857}
-  - component: {fileID: 5588473053498350161}
+  - component: {fileID: 7807334018095953689}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -144,7 +144,7 @@ MonoBehaviour:
   collision:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5588473053498350161
+--- !u!114 &7807334018095953689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,10 +153,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4677326345659031870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 787bf39c42da4341baeea2b7b1c58d42, type: 3}
+  m_Script: {fileID: 11500000, guid: 24d17999be404c3484dbbedec77c0510, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ResettableCharacterController
-  initialPosition: {x: 0.5, y: -0.5, z: -0.2}
+  m_EditorClassIdentifier: Assembly-CSharp::ResettableStartPosition
+  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &1357019795766887685
 PrefabInstance:
   m_ObjectHideFlags: 0
