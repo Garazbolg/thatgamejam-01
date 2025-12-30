@@ -4,6 +4,7 @@ public class CharacterSpawnerDefinition : MonoBehaviour
 {
     public Color color;
     public float lineAlpha;
+    public float characterAlpha;
     public int spawnIndex;
     
     public PathPreviz pathPreviz;
@@ -13,7 +14,9 @@ public class CharacterSpawnerDefinition : MonoBehaviour
 
     private void OnValidate()
     {
-        spriteRenderer.color = color;
+        var characterColor = color;
+        characterColor.a = characterAlpha;
+        spriteRenderer.color = characterColor;
         var lineColor = color;
         lineColor.a = lineAlpha;
         lineRenderer.startColor = lineColor;

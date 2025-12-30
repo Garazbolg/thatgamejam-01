@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSpawnerDefinition
   color: {r: 1, g: 0, b: 0, a: 1}
   lineAlpha: 0.5
+  characterAlpha: 1
   spawnIndex: 0
   pathPreviz: {fileID: 5406773031814564680}
   spriteRenderer: {fileID: 3689917822975037727}
@@ -288,6 +289,10 @@ PrefabInstance:
     - target: {fileID: 208921765955268845, guid: 36099faec3ce52f4487982446344512d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644987868849093611, guid: 36099faec3ce52f4487982446344512d, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3644987868849093611, guid: 36099faec3ce52f4487982446344512d, type: 3}
       propertyPath: m_Color.b

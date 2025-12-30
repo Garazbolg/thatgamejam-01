@@ -1,7 +1,9 @@
 {
     "PixelsPerUnit": 16,
     "CustomLevelPrefab": {
-        "instanceID": 0
+        "fileID": 2325893878675728662,
+        "guid": "3c036d1b9380dda4b88c19d1563aa9fd",
+        "type": 3
     },
     "IntGridValueColorsVisible": true,
     "UseCompositeCollider": true,
