@@ -28,9 +28,17 @@ PrefabInstance:
       propertyPath: color.g
       value: 0.6745098
       objectReference: {fileID: 0}
+    - target: {fileID: 2649789333790119017, guid: 4cb826b8dbbbb9648803a439374928fa, type: 3}
+      propertyPath: spawnIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3689917822975037727, guid: 4cb826b8dbbbb9648803a439374928fa, type: 3}
       propertyPath: m_Color.g
       value: 0.6745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873280676184897605, guid: 4cb826b8dbbbb9648803a439374928fa, type: 3}
+      propertyPath: spawnIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5406773031814564680, guid: 4cb826b8dbbbb9648803a439374928fa, type: 3}
       propertyPath: waitColor.g

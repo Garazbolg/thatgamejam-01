@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         currentCharacterIndex = 0;
         characterControllers = FindObjectsByType<CharacterCommandController>(FindObjectsInactive.Exclude, FindObjectsSortMode.InstanceID);
-        Array.Sort(characterControllers, (a, b) => a.name.CompareTo(b.gameObject.name));
+        Array.Sort(characterControllers, (a, b) => a.spawnIndex.CompareTo(b.spawnIndex));
         resettableEntities = FindObjectsByType<ResettableEntity>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
     }
     
