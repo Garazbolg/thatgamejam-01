@@ -49,7 +49,7 @@ public class CharacterCommandController : MonoBehaviour, IMoveable
         }
         else
         {
-            GameManager.instance.sequencePlayer.SendOpCode(SequenceOpCode.Invalid);
+            GameManager.instance.sequencePlayer.SendOpCode(SequenceOpCode.Invalid , transform.position + direction/2, spawnIndex);
         }
     }
 

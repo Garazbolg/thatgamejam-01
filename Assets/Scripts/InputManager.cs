@@ -16,6 +16,7 @@ public class InputManager : MonoBehaviour
     public InputActionReference nextCharacterAction;
     public InputActionReference playSequenceAction;
     public InputActionReference eraseSequenceAction;
+    public InputActionReference eraseCommandAction;
 
     private void OnEnable()
     {
@@ -28,6 +29,7 @@ public class InputManager : MonoBehaviour
         nextCharacterAction.action.performed += OnNextCharacter;
         playSequenceAction.action.performed += OnPlaySequence;
         eraseSequenceAction.action.performed += OnEraseSequence;
+        eraseCommandAction.action.performed += OnEraseCommand;
 
         commandUpAction.action.Enable();
         commandDownAction.action.Enable();
@@ -38,6 +40,7 @@ public class InputManager : MonoBehaviour
         nextCharacterAction.action.Enable();
         playSequenceAction.action.Enable();
         eraseSequenceAction.action.Enable();
+        eraseCommandAction.action.Enable();
     }
     
     private void OnDisable()
@@ -51,6 +54,7 @@ public class InputManager : MonoBehaviour
         nextCharacterAction.action.performed -= OnNextCharacter;
         playSequenceAction.action.performed -= OnPlaySequence;
         eraseSequenceAction.action.performed -= OnEraseSequence;
+        eraseCommandAction.action.performed -= OnEraseCommand;
 
         commandUpAction.action.Disable();
         commandDownAction.action.Disable();
@@ -61,6 +65,7 @@ public class InputManager : MonoBehaviour
         nextCharacterAction.action.Disable();
         playSequenceAction.action.Disable();
         eraseSequenceAction.action.Disable();
+        eraseCommandAction.action.Disable();
     }
     
     private void OnCommandUp(InputAction.CallbackContext context)
@@ -108,5 +113,11 @@ public class InputManager : MonoBehaviour
     {
         if(acceptingInput)
             instance.EraseCharacterCommands();
+    }
+    
+    private void OnEraseCommand(InputAction.CallbackContext context)
+    {
+        if(acceptingInput)
+            instance.EraseLastCommand();
     }
 }

@@ -66,6 +66,20 @@ public class GameManager : MonoBehaviour
         characterController.pathPreviz.ClearPreviz();
     }
     
+    public void EraseLastCommand()
+    {
+        if (currentCharacterIndex >= characterControllers.Length)
+        {
+            currentCharacterIndex = 0;
+        }
+        var characterController = characterControllers[currentCharacterIndex];
+        if (characterController != null && characterController.commands.Count > 0)
+        {
+            characterController.commands.RemoveAt(characterController.commands.Count - 1);
+        }
+        characterController.pathPreviz.UpdatePreviz(characterController);
+    }
+    
     public void ResetResettables()
     {
         foreach (var resettable in resettableEntities)

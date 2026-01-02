@@ -9,8 +9,11 @@ public class SequencePlayer : MonoBehaviour
     private Coroutine playSequenceCoroutine = null;
     public InputManager inputManager;
     public GameManager gameManager;
+    
+    public GameObject invalidMoveEffectPrefab;
 
-    public void SendOpCode(SequenceOpCode opCode, Vector3 position = default)
+
+    public void SendOpCode(SequenceOpCode opCode, Vector3 position = default, int characterIndex = -1)
     {
         switch (opCode)
         {
@@ -18,9 +21,18 @@ public class SequencePlayer : MonoBehaviour
                 inputManager.acceptingInput = false;
                 playSequenceCoroutine = StartCoroutine(PlaySequence());
                 break;
-            case SequenceOpCode.Stop:
             case SequenceOpCode.Invalid:
             case SequenceOpCode.Death:
+                StopCoroutine(playSequenceCoroutine);
+                if (invalidMoveEffectPrefab != null)
+                {
+                    var go = Instantiate(invalidMoveEffectPrefab, position, Quaternion.identity);
+                }
+                gameManager.ResetResettables();
+                playSequenceCoroutine = null;
+                inputManager.acceptingInput = true;
+                break;
+            case SequenceOpCode.Stop:
                 StopCoroutine(playSequenceCoroutine);
                 gameManager.ResetResettables();
                 playSequenceCoroutine = null;

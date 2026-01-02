@@ -77,6 +77,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "EraseLastCommand",
+                    "type": "Button",
+                    "id": "965bc191-8019-4900-b881-cc8759df4781",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -160,11 +169,22 @@
                 {
                     "name": "",
                     "id": "f2864e90-9e93-4fee-a14e-0c0eb752db57",
-                    "path": "<Keyboard>/backspace",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "EraseCharacterSequence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f5a26f1-4f37-4f2c-b2d7-273500f50d3d",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EraseLastCommand",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
