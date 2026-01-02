@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_VFX_CharacterBase
+  m_Name: M_VFX_MasterUnlit_Empty
   m_Shader: {fileID: -6465566751694194690, guid: fff9b8787cd0d1347a634f8d9bbeb9f8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -36,8 +36,8 @@ Material:
     RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
-  - SHADOWCASTER
   - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -47,7 +47,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture:
-        m_Texture: {fileID: 2800000, guid: a02995a2c2f0d0a4e967e7ba627b9e4b, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlphaTex:
@@ -103,7 +103,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubtractTexture:
-        m_Texture: {fileID: 2800000, guid: 26facb2b12a613c4abdf926f4ef5f043, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -123,7 +123,7 @@ Material:
     - _ActivateMaskDistortion: 0
     - _AffectErode: 0
     - _AffectMask: 0
-    - _AffectSubtract: 1
+    - _AffectSubtract: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
@@ -156,15 +156,15 @@ Material:
     - _Rotation: 0
     - _SrcBlend: 5
     - _SrcBlendAlpha: 1
-    - _SubtractIntensity: 0.22
-    - _SubtractMax: 0
-    - _SubtractMin: 1
+    - _SubtractIntensity: 1
+    - _SubtractMax: 1
+    - _SubtractMin: 0
     - _SubtractRotation: 0
     - _Surface: 1
     - _USE_DISTORTION: 0
     - _USE_ERODE: 0
     - _USE_MASK: 0
-    - _USE_SUBTRACT: 1
+    - _USE_SUBTRACT: 0
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
@@ -186,12 +186,12 @@ Material:
     - _MaskOffset: {r: 0, g: 0, b: 0, a: 0}
     - _MaskScale: {r: 1, g: 1, b: 0, a: 0}
     - _MaskScroll: {r: 0, g: 0, b: 0, a: 0}
-    - _Offset: {r: 1, g: 1, b: 0, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _Scale: {r: 1, g: 1, b: 0, a: 0}
     - _Scroll: {r: 0, g: 0, b: 0, a: 0}
     - _SubtractOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _SubtractScale: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _SubtractScale: {r: 1, g: 1, b: 0, a: 0}
     - _SubtractScroll: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
