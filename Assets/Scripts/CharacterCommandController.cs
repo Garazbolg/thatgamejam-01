@@ -8,6 +8,7 @@ public class CharacterCommandController : MonoBehaviour, IMoveable
     public PathPreviz pathPreviz;
     public int spawnIndex;
     public LayerMask collision;
+    public GameObject preCollision;
     
     public void TakeTurn(int index)
     {
@@ -17,6 +18,38 @@ public class CharacterCommandController : MonoBehaviour, IMoveable
             command = commands[index];
         }
         ExecuteCommand(command);
+    }
+    
+    public void PreviewTurn(int index)
+    {
+        var command = Command.Wait;
+        if (index >= 0 && index < commands.Count)
+        {
+            command = commands[index];
+        }
+        SetPreCollision(command);
+    }
+
+    private void SetPreCollision(Command command)
+    {
+        switch (command)
+        {
+            case Command.MoveUp:
+                preCollision.transform.localPosition = Vector3.up;
+                break;
+            case Command.MoveDown:
+                preCollision.transform.localPosition = Vector3.down;
+                break;
+            case Command.MoveLeft:
+                preCollision.transform.localPosition = Vector3.left;
+                break;
+            case Command.MoveRight:
+                preCollision.transform.localPosition = Vector3.right;
+                break;
+            case Command.Wait:
+                preCollision.transform.localPosition = Vector3.zero;
+                break;
+        }
     }
     
     private void ExecuteCommand(Command command)
@@ -83,7 +116,7 @@ public class CharacterCommandController : MonoBehaviour, IMoveable
             moveable.Move(direction);
         }
         
+        preCollision.transform.localPosition = Vector3.zero;
         transform.position += direction;
-        
     }
 }

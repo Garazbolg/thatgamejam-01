@@ -5,7 +5,6 @@ using UnityEngine;
 public class SequencePlayer : MonoBehaviour
 {
     public CharacterCommandController[] characterControllers => GameManager.instance.characterControllers;
-    public int currentCharacterIndex = 0;
     private Coroutine playSequenceCoroutine = null;
     public InputManager inputManager;
     public GameManager gameManager;
@@ -19,6 +18,7 @@ public class SequencePlayer : MonoBehaviour
         {
             case SequenceOpCode.Play:
                 inputManager.acceptingInput = false;
+                gameManager.characterControllers[gameManager.currentCharacterIndex].pathPreviz.Hide();
                 playSequenceCoroutine = StartCoroutine(PlaySequence());
                 break;
             case SequenceOpCode.Invalid:
@@ -31,12 +31,14 @@ public class SequencePlayer : MonoBehaviour
                 gameManager.ResetResettables();
                 playSequenceCoroutine = null;
                 inputManager.acceptingInput = true;
+                gameManager.characterControllers[gameManager.currentCharacterIndex].pathPreviz.Show();
                 break;
             case SequenceOpCode.Stop:
                 StopCoroutine(playSequenceCoroutine);
                 gameManager.ResetResettables();
                 playSequenceCoroutine = null;
                 inputManager.acceptingInput = true;
+                gameManager.characterControllers[gameManager.currentCharacterIndex].pathPreviz.Show();
                 break;
             case SequenceOpCode.Victory:
                 StopCoroutine(playSequenceCoroutine);
@@ -67,6 +69,7 @@ public class SequencePlayer : MonoBehaviour
         while (true)
         {
             bool anyCommandsLeft = false;
+            
             foreach (var characterController in characterControllers)
             {
                 if (characterController != null)
@@ -84,6 +87,13 @@ public class SequencePlayer : MonoBehaviour
                 break;
             }
             moveIndex++;
+            foreach (var characterController in characterControllers)
+            {
+                if (characterController != null)
+                {
+                    characterController.PreviewTurn(moveIndex);
+                }
+            }
             yield return new WaitForSeconds(.25f); // Wait for .25 second between moves
         }
     }

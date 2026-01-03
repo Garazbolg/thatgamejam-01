@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour
         characterControllers = FindObjectsByType<CharacterCommandController>(FindObjectsInactive.Exclude, FindObjectsSortMode.InstanceID);
         Array.Sort(characterControllers, (a, b) => a.spawnIndex.CompareTo(b.spawnIndex));
         resettableEntities = FindObjectsByType<ResettableEntity>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+        foreach (var characterController in characterControllers)
+        {
+            characterController.pathPreviz.Hide();
+        }
+        characterControllers[currentCharacterIndex].pathPreviz.Show();
     }
     
     public void EnqueueCommand(Command command)
@@ -48,8 +53,10 @@ public class GameManager : MonoBehaviour
 
     public void NextCharacter()
     {
+        characterControllers[currentCharacterIndex].pathPreviz.Hide();
         currentCharacterIndex++;
         currentCharacterIndex %= characterControllers.Length;
+        characterControllers[currentCharacterIndex].pathPreviz.Show();
     }
     
     public void EraseCharacterCommands()

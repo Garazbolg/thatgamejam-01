@@ -7,6 +7,7 @@ public class PathPreviz : MonoBehaviour
     public LineRenderer lineRenderer;
     public PrevizWaitView waitViewPrefab;
     private List<GameObject> waitViews = new List<GameObject>();
+    public GameObject selectedEffect;
 
     public Color waitColor;
 
@@ -71,5 +72,15 @@ public class PathPreviz : MonoBehaviour
             Destroy(waitView);
         }
         waitViews.Clear();
+    }
+
+    public void Show()
+    {
+        selectedEffect.SetActive(true);
+    }
+    
+    public void Hide()
+    {
+        selectedEffect.SetActive(false);
     }
 }
