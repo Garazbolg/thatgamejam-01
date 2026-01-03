@@ -12,10 +12,10 @@ ScriptedImporter:
   _jsonFile: {fileID: -164016180542632921, guid: e839fc06003d5e94d91dacdec9577fdb, type: 3}
   _pixelsPerUnit: 16
   _customLevelPrefab: {fileID: 2325893878675728662, guid: 3c036d1b9380dda4b88c19d1563aa9fd, type: 3}
-  _intGridValueColorsVisible: 1
+  _intGridValueColorsVisible: 0
   _useCompositeCollider: 1
   _geometryType: 0
-  _createBackgroundColor: 1
+  _createBackgroundColor: 0
   _createLevelBoundsTrigger: 0
   _useParallax: 0
   _scaleEntities: 0
@@ -44,5 +44,7 @@ ScriptedImporter:
   _layerCustomSortingOrders:
   - _ldtkLayerName: Entities
     _ldtkLayerOrder: 0
+  - _ldtkLayerName: Path_Tiles
+    _ldtkLayerOrder: -1
   - _ldtkLayerName: Collision
     _ldtkLayerOrder: 0

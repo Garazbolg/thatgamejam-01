@@ -5,10 +5,10 @@
         "guid": "3c036d1b9380dda4b88c19d1563aa9fd",
         "type": 3
     },
-    "IntGridValueColorsVisible": true,
+    "IntGridValueColorsVisible": false,
     "UseCompositeCollider": true,
     "GeometryType": 0,
-    "CreateBackgroundColor": true,
+    "CreateBackgroundColor": false,
     "CreateLevelBoundsTrigger": false,
     "UseParallax": false,
     "ScaleEntities": false,

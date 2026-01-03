@@ -1,0 +1,33 @@
+{
+  "Rects": null,
+  "Def": {
+    "__cHei": 1,
+    "__cWid": 1,
+    "cachedPixelData": {
+      "opaqueTiles": "0",
+      "averageColors": "b2ab"
+    },
+    "customData": [
+
+    ],
+    "embedAtlas": null,
+    "enumTags": [
+
+    ],
+    "identifier": "Path_Tile",
+    "padding": 0,
+    "pxHei": 16,
+    "pxWid": 16,
+    "relPath": "../Graphics/Textures/Path Tile.png",
+    "savedSelections": [
+
+    ],
+    "spacing": 0,
+    "tags": [
+
+    ],
+    "tagsSourceEnumUid": null,
+    "tileGridSize": 16,
+    "uid": 14
+  }
+}
