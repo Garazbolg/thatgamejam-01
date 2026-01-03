@@ -85,22 +85,6 @@
 					"__worldY": 16
 				},
 				{
-					"__identifier": "Spawner_Color_1",
-					"__grid": [2,11],
-					"__pivot": [0,0],
-					"__tags": [],
-					"__tile": null,
-					"__smartColor": "#FF0000",
-					"iid": "9d230a20-d380-11f0-84e4-f51ae4cc5977",
-					"width": 16,
-					"height": 16,
-					"defUid": 2,
-					"px": [32,176],
-					"fieldInstances": [],
-					"__worldX": 32,
-					"__worldY": 176
-				},
-				{
 					"__identifier": "Spawner_Color_4",
 					"__grid": [10,11],
 					"__pivot": [0,0],

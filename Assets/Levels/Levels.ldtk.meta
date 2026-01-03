@@ -33,6 +33,10 @@ ScriptedImporter:
     _asset: {fileID: 7066913251823411541, guid: ea2685b0d713655409d035ec559e9c07, type: 3}
   - _key: AnyBlock
     _asset: {fileID: 5851414908131563480, guid: 80c46b0827c5ec449943f505cdcdc330, type: 3}
+  - _key: WallHorizontal
+    _asset: {fileID: 7736199503238001299, guid: 734ee00726cdf9144bc9799a1b27efd8, type: 3}
+  - _key: WallVertical
+    _asset: {fileID: 5296670446939933702, guid: 51243821c0d970640a6915477ec73936, type: 3}
   _enumGenerate: 0
   _enumPath: 
   _enumNamespace: 
