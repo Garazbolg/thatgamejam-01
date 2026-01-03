@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public CharacterCommandController[] characterControllers;
+    public WinCondition[] winConditions;
     public ResettableEntity[] resettableEntities;
     public int currentCharacterIndex = 0;
     public InputManager inputManager;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
         currentCharacterIndex = 0;
         characterControllers = FindObjectsByType<CharacterCommandController>(FindObjectsInactive.Exclude, FindObjectsSortMode.InstanceID);
         Array.Sort(characterControllers, (a, b) => a.spawnIndex.CompareTo(b.spawnIndex));
+        winConditions = FindObjectsByType<WinCondition>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
         resettableEntities = FindObjectsByType<ResettableEntity>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
         foreach (var characterController in characterControllers)
         {

@@ -78,6 +78,38 @@
                 "guid": "51243821c0d970640a6915477ec73936",
                 "type": 3
             }
+        },
+        {
+            "_key": "Goal_Color_1",
+            "_asset": {
+                "fileID": 5750868757228450525,
+                "guid": "37db0b18c3c4b85428061c5402b32258",
+                "type": 3
+            }
+        },
+        {
+            "_key": "Goal_Color_2",
+            "_asset": {
+                "fileID": 8889957216356266514,
+                "guid": "d8226b0094e2d1d4dbdf9cf27bcc45aa",
+                "type": 3
+            }
+        },
+        {
+            "_key": "Goal_Color_3",
+            "_asset": {
+                "fileID": 8889957216356266514,
+                "guid": "e861b97083b08464f8243e14d8e8a3aa",
+                "type": 3
+            }
+        },
+        {
+            "_key": "Goal_Color_4",
+            "_asset": {
+                "fileID": 8889957216356266514,
+                "guid": "4fe7b7dff117a4140849ccbff2c69ca5",
+                "type": 3
+            }
         }
     ]
 }

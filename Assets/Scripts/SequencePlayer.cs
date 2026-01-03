@@ -81,6 +81,25 @@ public class SequencePlayer : MonoBehaviour
                     characterController.TakeTurn(moveIndex);
                 }
             }
+            
+            yield return null;
+
+            bool winConditionMet = true;
+            foreach (var winCondition in gameManager.winConditions)
+            {
+                if (winCondition != null && !winCondition.IsWinConditionMet())
+                {
+                    winConditionMet = false;
+                    break;
+                }
+            }
+            
+            if (winConditionMet)
+            {
+                SendOpCode(SequenceOpCode.Victory);
+                break;
+            }
+            
             if (!anyCommandsLeft)
             {
                 SendOpCode(SequenceOpCode.Stop);
